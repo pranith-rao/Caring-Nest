@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".MainSelect">
+
+    <Button
+        android:id="@+id/about"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/ic_icons8_info"/>
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+        <soup.neumorphism.NeumorphFloatingActionButton
+            app:neumorph_shapeType="basin"
+            android:id="@+id/img_logo"
+            style="@style/Widget.Neumorph.FloatingActionButton"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@mipmap/ic_launcher_foreground"
+            android:layout_centerInParent="true"
+            android:transitionName="logo_icon"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Caring Nest"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/img_logo"
+            android:textSize="40sp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/textColor"
+            android:transitionName="logo_text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/layout_top"
+        android:layout_marginTop="15dp"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="10dp">
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="180dp"
+                android:layout_height="220dp"
+                android:clickable="true"
+                android:id="@+id/user_select">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:padding="0dp"
+                    android:src="@mipmap/ic_booking_foreground" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="120dp"
+                    android:text="Book\nAmbulance"
+                    android:gravity="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </soup.neumorphism.NeumorphCardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="180dp"
+                android:layout_height="190dp"
+                android:clickable="true"
+                android:id="@+id/admin_select">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="150dp"
+                    android:maxWidth="150dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ic_admin_foreground" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="ADMIN"
+                    android:layout_marginTop="120dp"
+                    android:textColor="@color/textColor"/>
+            </soup.neumorphism.NeumorphCardView>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+

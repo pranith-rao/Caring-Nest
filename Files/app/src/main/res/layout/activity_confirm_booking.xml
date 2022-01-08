@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_background">
+
+    <soup.neumorphism.NeumorphFloatingActionButton
+        style="@style/Widget.Neumorph.FloatingActionButton"
+        android:id="@+id/backBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm\nBooking"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:layout_below="@id/backBtn"
+        android:textColor="@color/textColor"
+        android:layout_marginLeft="30dp" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/ll1"
+        android:layout_below="@id/tv1"
+        style="@style/ShapeAppearance.Neumorph.CardView"
+        app:neumorph_shapeType="basin"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv1"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Details"
+                android:id="@+id/tv2"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/textColor"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name  :  "
+                android:id="@+id/uName"
+                android:layout_below="@id/tv2"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/textColor"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone  :  "
+                android:id="@+id/uPhone"
+                android:layout_below="@id/uName"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/textColor"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location  :  "
+                android:id="@+id/uLocation"
+                android:layout_below="@id/uPhone"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/textColor"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/ll2"
+        android:layout_below="@id/ll1"
+        style="@style/ShapeAppearance.Neumorph.CardView"
+        app:neumorph_shapeType="basin"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv1"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ambulance Details"
+            android:id="@+id/tv3"
+            android:layout_below="@id/ll1"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/textColor" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name  :  "
+            android:id="@+id/aName"
+            android:layout_below="@id/tv3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/textColor"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone  :  "
+            android:id="@+id/aPhone"
+            android:layout_below="@id/aName"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/textColor"
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location  :  "
+            android:id="@+id/aLocation"
+            android:layout_below="@id/aPhone"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/textColor"
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp" />
+        </LinearLayout>
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphButton
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:id="@+id/confirm"
+        android:textSize="18sp"
+        android:textColor="@color/textColor"
+        android:layout_below="@id/ll2"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

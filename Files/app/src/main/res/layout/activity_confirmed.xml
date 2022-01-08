@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/light_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <soup.neumorphism.NeumorphImageView
+        style="@style/Widget.Neumorph.FloatingActionButton"
+        android:id="@+id/check"
+        app:neumorph_shapeType="pressed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_channel_foreground"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv1"
+        android:textStyle="bold"
+        android:layout_below="@id/check"
+        android:text="Ambulance is\non the way"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="40dp"
+        android:textColor="@color/textColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv2"
+        android:text="Make note of the details of ambulance"
+        android:layout_below="@id/tv1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/textHint"
+        android:textSize="20sp"/>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/ll1"
+        android:layout_below="@id/tv2"
+        style="@style/ShapeAppearance.Neumorph.CardView"
+        app:neumorph_shapeType="basin"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv1"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name  :  "
+                android:id="@+id/tv3"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone  :  "
+                android:id="@+id/tv4"
+                android:layout_below="@id/tv3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location  :  "
+                android:id="@+id/tv5"
+                android:layout_below="@id/tv4"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphButton
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:text="Call Driver"
+        android:textSize="18dp"
+        android:textColor="@color/textColor"
+        android:id="@+id/call"
+        android:layout_below="@id/ll1"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <soup.neumorphism.NeumorphButton
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:textSize="18dp"
+        android:textColor="@color/textColor"
+        android:id="@+id/close"
+        android:layout_below="@id/call"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

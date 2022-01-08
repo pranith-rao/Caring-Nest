@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin Login"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="140dp"> </TextView>
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="10dp">
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/n1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:neumorph_shapeType="pressed"
+            android:layout_marginTop="25dp">
+            <EditText
+                android:id="@+id/et_adminEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:hint="Userame"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHint"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="20dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@drawable/no_background"/>
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/n2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:neumorph_shapeType="pressed"
+            android:layout_below="@id/n1">
+            <EditText
+                android:id="@+id/et_adminPass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:textColorHint="@color/textHint"
+                android:textColor="@color/textColor"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="20dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@drawable/no_background"/>
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphButton
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_adminLogin"
+            android:text="Login"
+            android:textSize="18dp"
+            android:textColor="@color/textColor"
+            android:layout_below="@id/layout_main"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp">
+        </soup.neumorphism.NeumorphButton>
+    </LinearLayout>
+
+    <soup.neumorphism.NeumorphFloatingActionButton
+        style="@style/Widget.Neumorph.FloatingActionButton"
+        android:id="@+id/btn_home"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_baseline_clear_24"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp">
+    </soup.neumorphism.NeumorphFloatingActionButton>
+</RelativeLayout>

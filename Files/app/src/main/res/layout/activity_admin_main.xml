@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <soup.neumorphism.NeumorphFloatingActionButton
+        style="@style/Widget.Neumorph.FloatingActionButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/back_admin"
+        android:scaleType="center"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp">
+    </soup.neumorphism.NeumorphFloatingActionButton>
+
+    <soup.neumorphism.NeumorphButton
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/admin_addDetails"
+        android:text="Add details"
+        android:layout_below="@id/back_admin"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/textColor"
+        android:layout_marginRight="15dp"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"> </soup.neumorphism.NeumorphButton>
+
+    <soup.neumorphism.NeumorphButton
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/admin_logs"
+        android:text="Booking History"
+        android:textColor="@color/textColor"
+        android:layout_below="@id/admin_addDetails"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true">
+    </soup.neumorphism.NeumorphButton>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pullToRefresh"
+        android:layout_below="@id/admin_logs"
+        android:layout_marginTop="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

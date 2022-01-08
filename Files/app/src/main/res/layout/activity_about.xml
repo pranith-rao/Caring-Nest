@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About"
+    android:background="@color/light_background">
+
+    <soup.neumorphism.NeumorphFloatingActionButton
+        style="@style/Widget.Neumorph.FloatingActionButton"
+        android:id="@+id/cancel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_baseline_clear_24"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp">
+    </soup.neumorphism.NeumorphFloatingActionButton>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Caring Nest"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        android:layout_below="@id/cancel"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:textSize="22sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/textColor"
+        android:lineSpacingExtra="15dp"
+        android:fontFamily="sans-serif"
+        android:text="This app helps the user to book an ambulance in case of any emergencies with minimal interactions and provides necessary details of the patient to the respective ambulance driver with just one click." />
+</RelativeLayout>

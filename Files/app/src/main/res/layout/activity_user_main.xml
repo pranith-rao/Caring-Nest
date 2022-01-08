@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <soup.neumorphism.NeumorphFloatingActionButton
+        style="@style/Widget.Neumorph.FloatingActionButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/back_user"
+        android:scaleType="center"
+        android:src="@drawable/ic_baseline_clear_24"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp">
+    </soup.neumorphism.NeumorphFloatingActionButton>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select one"
+        android:textStyle="bold"
+        android:id="@+id/tv"
+        android:layout_below="@id/back_user"
+        android:textSize="40dp"
+        android:textColor="@color/textColor"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose according to your nearest location"
+        android:id="@+id/tv2"
+        android:layout_below="@id/tv"
+        android:textSize="20dp"
+        android:textColor="@color/textHint"
+        android:layout_marginLeft="30dp"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pullToRefresh"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tv2">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/u_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

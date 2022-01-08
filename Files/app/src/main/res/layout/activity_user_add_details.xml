@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <soup.neumorphism.NeumorphFloatingActionButton
+        style="@style/Widget.Neumorph.FloatingActionButton"
+        android:id="@+id/cancelBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_baseline_clear_24"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp">
+     </soup.neumorphism.NeumorphFloatingActionButton>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="45sp"> </TextView>
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_below="@id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your details"
+        android:textColor="@color/textColor"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:textSize="25sp"> </TextView>
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv2"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/n1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:neumorph_shapeType="pressed"
+            android:layout_marginTop="25dp">
+            <EditText
+                android:id="@+id/u_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:hint="Name"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHint"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="20dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@drawable/no_background"/>
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/n2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:neumorph_shapeType="pressed"
+            android:layout_below="@id/n1">
+            <EditText
+                android:id="@+id/u_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="phone"
+                android:hint="Phone Number"
+                android:textColorHint="@color/textHint"
+                android:textColor="@color/textColor"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="20dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@drawable/no_background"/>
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/n3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:neumorph_shapeType="pressed"
+            android:layout_below="@id/n2">
+            <EditText
+                android:id="@+id/u_location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:hint="Location"
+                android:textColorHint="@color/textHint"
+                android:textColor="@color/textColor"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="20dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@drawable/no_background"/>
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphButton
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ubtn_submit"
+            android:text="Submit"
+            android:textSize="18dp"
+            android:textColor="@color/textColor"
+            android:layout_below="@id/n3"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+        </soup.neumorphism.NeumorphButton>
+
+    </LinearLayout>
+</RelativeLayout>

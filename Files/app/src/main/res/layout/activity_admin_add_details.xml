@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <soup.neumorphism.NeumorphFloatingActionButton
+        style="@style/Widget.Neumorph.FloatingActionButton"
+        android:id="@+id/btn_cancel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_baseline_clear_24"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp">
+
+    </soup.neumorphism.NeumorphFloatingActionButton>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/admin_addDetails_head"
+        android:layout_below="@id/btn_cancel"
+        android:text="Add Ambulance Details"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        android:layout_marginLeft="30dp"
+        android:textSize="40dp"> </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv1"
+        android:layout_below="@id/admin_addDetails_head"
+        android:text="Enter details carefully"
+        android:textColor="@color/textHint"
+        android:layout_marginLeft="30dp"
+        android:textSize="20dp"> </TextView>
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/tv1"
+        android:visibility="gone">
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/n1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:neumorph_shapeType="pressed"
+            android:layout_marginTop="25dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/et_name"
+                android:inputType="text"
+                android:hint="Name"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHint"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="20dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@drawable/no_background">
+            </EditText>
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/n2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:neumorph_shapeType="pressed">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/et_phone"
+                android:inputType="phone"
+                android:hint="Phone Number"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHint"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="20dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@drawable/no_background">
+            </EditText>
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/n3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:neumorph_shapeType="pressed">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/et_location"
+                android:inputType="text"
+                android:hint="Location"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHint"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="20dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@drawable/no_background">
+            </EditText>
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/n4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:neumorph_shapeType="pressed">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/et_email"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHint"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="20dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@drawable/no_background">
+            </EditText>
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphButton
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_addDetails"
+            android:text="Add Details"
+            android:textColor="@color/textColor"
+            android:layout_below="@id/et_email"
+            android:layout_centerHorizontal="true"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+        </soup.neumorphism.NeumorphButton>
+    </LinearLayout>
+</RelativeLayout>
