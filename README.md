@@ -5,7 +5,7 @@ To have a glimpse on how this app works watch this https://youtu.be/K-60mnS4VTE
 
 ## Steps to run the app
 ### Mobile:
-Download the apk on your phone from this link https://eatmyurl.ml/caringnestapk and test it out.
+Download the apk on your phone from this link https://shorturl.at/aepr5 and test it out.
 ### PC:
 1. Download the files from this repository into a folder of your choice.
 2. Open that folder in android-studio. 
